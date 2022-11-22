@@ -1,0 +1,37 @@
+<div class="Welcome" [style.backgroundColor]="color">
+  <h1>Welcome, {{firstName}}</h1>
+  <p>Basic learning</p>
+  <!------- Alert Message Pop-up ------->
+  <div class ="alert-msg">
+    <button id="alertButton" class="button" onclick="alert('Hello world!')">Click Me!</button>
+  </div>
+  <br>
+  <!------- Background color change on click ------->
+  <div class="bgColorChange">
+  <button id="colorChangeButton" type= "select" (click)= "changeBg()">Change BG</button> 
+  </div>
+  <br>
+  <input type ="text" [value] ="text">
+  <!------- used ngif directives ------->
+  <div *ngIf ="displayName; then thenblock; else elseblock"></div>
+  <ng-template #thenblock>
+  <p><br>Codevolution</p>
+  </ng-template>
+  <ng-template #elseblock>
+    <p><br>Name is hidden(used ngif directive)</p>
+  </ng-template><br>
+  <button (click)="executeEvent()">event</button>
+  <br><br>
+  Enter the value  : <input [(ngModel)] ='val'> 
+  <br> 
+  Entered value is:  {{val}} 
+  <br>
+  <!------- used dependency injection ------->
+  <h3>Array of Data</h3>
+  <ul *ngFor = "let data of datas">
+    <li>{{data.name}},{{data.role}}</li>
+  </ul>
+ </div>
+
+
+

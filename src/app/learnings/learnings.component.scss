@@ -1,0 +1,20 @@
+.Welcome{
+    height: 100vh;
+    width: 100vw;
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    display: inline-block;
+    font-size: 16px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+button.bgColorChange{
+    background-color:rgb(18, 230, 201);
+    padding: 10px 30px
+} 
